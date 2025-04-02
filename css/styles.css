@@ -1,0 +1,697 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #f4a261;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 4px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.banner {
+    background: url('images/imagen1.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding-top: 60px; /* For fixed header */
+}
+
+.banner h1 {
+    font-size: 3em;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.banner p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.btn {
+    background: #f4a261;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #e76f51;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    padding-top: 80px; /* For fixed header */
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.about, .services, .gallery, .contact {
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+
+/*    flex-wrap: wrap;*/
+    gap: 20px;
+}
+
+.service {
+    width: 30%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+}
+
+.gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gallery-images img {
+/*    position: relative;*/
+    width: calc(33.333% - 20px);
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    gap: 15px;
+}
+
+.gallery-images img:hover {
+    transform: scale(1.1);
+}
+
+.gallery h2 {
+    padding-bottom: 15px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: red;
+    z-index: 999;
+}
+
+.nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background: #333;
+    padding-top: 60px; /* For fixed header */
+    z-index: 1000;
+    animation: slideIn 0.3s ease-in-out;
+}
+
+.nav-links.open li {
+    margin: 20px 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .gallery-images img {
+        width: 100%;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .overlay.active {
+        display: block;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* scroll navegacion circular  */
+
+#scroll-circular{
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  box-shadow:5px 10px 20px rgba(5, 3, 133, 0.2); 
+/*  top:95%;  innecesaria por llevar bottom*/
+/*  left:95%; innecesaria por llevar right*/
+/*  transform:translate(-100%,-100%);  inncesaria por llevar bottom y right*/
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgb(6, 91, 175);
+  z-index: 1;
+}
+
+#percent{
+  width:60px;
+  height:60px;
+  background:rgb(224, 222, 222);
+  border-radius:55%;
+  text-align:center;
+  line-height:50px;
+ border: 3px solid rgb(113, 183, 240);
+}
+
+
+
+
+.titulos-galerias          {    
+    text-align: center;
+    padding: 20px;  
+}
+
+
+
+/* estilos para la seccion de imagenes */
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ flex-wrap: wrap; /*flex-wrap -esto hace responsive las cards */
+}
+
+
+/* CARD */
+.card{
+  position: relative;
+  width: 250px;
+  height: 215px;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* oculta contenido, para despues mostrarlo con hover */
+}
+
+.img{
+width: 100%;
+height: 100%;  
+}
+
+.img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* CONTENIDO */
+.content {
+ position: absolute; 
+ bottom: -100px;
+ width: 100%;
+/* height: 100px; esto determina altura de conten. del hover */
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ backdrop-filter: blur(15px);
+ transition: all .5s;
+}
+
+/*viene de linea 46 overflow: hidden y bottom -160 65 - muestra contenido al pasar mouse - oculta abajo luego lo sube */
+.card:hover .content{
+  bottom: 0;
+  height: 100px; /*esto determina altura de conten. del hover */
+}
+
+
+
+/* TEXTO */
+.content .text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10px; /* Reduce el espacio inferior entre el texto y los iconos */
+}
+
+.text h3, .text span{
+  color: #FFF;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 22px;
+  text-align: center;
+  transform: translateY(10px); /* posicion de texto verticalmente */
+  opacity: 0; /* oculta texto para jugar con hover */
+  transition: all .5s;
+}
+
+.text span{
+  font-size: 12px;
+}
+
+.card:hover .text h3,
+.card:hover .text span{
+  opacity: 1; /* muestra texto al pasar mouse */
+}
+
+
+
+/* SOCIALES */
+.sociales{
+  width: 60%;
+  margin: 0; /* Elimina el margen superior */
+  display: flex;
+  justify-content: space-around;
+}
+
+.sociales a{
+  font-size: 20px;
+  color: #FFF;
+  transform: translateY(40px);
+  opacity: 0; /* oculta iconos -para jugar con el hover al mostrarse despues*/
+  transition: all .5s;
+}
+
+.card:hover .sociales a{
+  transform: translateY(10px);
+  opacity: 1; /* al pasar mouse aparecen con efecto desliz. hacia arriba */
+}
+
+/* estos codigos realizan el deslizado de iconos hacia arriba uno por uno - separados */
+.sociales a:nth-child(1){
+  transition-delay: .2s;
+}
+
+.sociales a:nth-child(2){
+  transition-delay: .4s;
+}
+
+.sociales a:nth-child(3){
+  transition-delay: .6s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER*/
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: #1783db;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 10px 5px;
+  flex-wrap: wrap;
+}
+
+.icon-elem {
+  list-style: none;
+}
+
+.icon {
+  color: white;
+  font-size: 32px;
+  display: inline-block;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+
+.icon:hover {
+  transform: translateY(-10px);
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.menu-elem {
+  list-style: none;
+}
+.menu-icon {
+  color: white;
+  font-size: 20px;
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px 10px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.menu-icon:hover {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+
+
+/* Botón de WhatsApp */
+.btn-whatsapp {
+    position: fixed;
+    bottom: 95px;
+    right: 15px;
+    width: 70px;
+    height: 70px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-whatsapp img {
+    width: 40px;
+    height: 40px;
+}
+
+.btn-whatsapp:hover {
+    transform: scale(1.1);
+}
+
+
+/* Botón "Ir Arriba" */
+.btn-arriba {
+    position: fixed;
+    bottom: 175px;
+    right: 15px;
+    width: 70px;
+    height: 70px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-arriba:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* Modal */
+.modal {
+  display: none; /* El modal está oculto por defecto */
+  position: fixed;
+  z-index: 1; /* Asegura que el modal esté encima de otros elementos */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo semitransparente */
+  overflow: auto;
+  transition: opacity 0.5s ease-in-out; /* Transición suave */
+}
+
+/* Estilos del contenido del modal */
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto; /* Centra el modal en la pantalla */
+  padding: 20px;
+  border-radius: 8px;
+  width: 70%;
+  max-width: 600px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.5s ease-out;
+  position: relative;
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Estilo del botón de cierre */
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Botón para abrir el modal */
+#openModalBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+#openModalBtn:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+/* Estilos del botón de WhatsApp de la ventana emergente */
+.whatsappBtnMod {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #25D366; /* Color de fondo de WhatsApp */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Cambiar color de fondo al pasar el ratón */
+.whatsappBtnMod:hover {
+  background-color: #128C7E;
+}
+
+/* Icono de WhatsApp dentro del botón */
+.whatsappBtnMod-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+}

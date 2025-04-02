@@ -1,0 +1,10 @@
+en esta version se incluye:
+personalizar whatsapp 
+colocar link para abrir ventana modal
+ventana modal con el contenido del paquete
+ventana modal con boton whatsapp para contacto
+
+
+
+modificaciones varias a textos de contenido
+
