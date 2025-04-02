@@ -1,0 +1,17 @@
+GITHUB  (volver a ver para ver la pagina funcionando, solo se ve el repositorio)
+para subir proyectos a github: (sitios en linea gratis)
+
+accesar a ... https://desktop.github.com/
+descargar programa
+
+iniciar sesion y subir proyectos
+de preferencia crear nueva carpeta, dentros de carpeta github creada al instalar el programa
+
+GITHUB   -   https://github.com/
+megbinario@gmail.com     Sin@psis7
+user: Sinaptron       Sinaptron/DebWebSinapsis
+
+https://pages.github.com/
+
+SERVIDORES EN LINEA
+https://gist.github.com/willurd/5720255
